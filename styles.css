@@ -18,8 +18,7 @@ body {
     box-sizing: border-box;
 }
 
-h1, .subtitle, h2, p, .tagline, button, .support-merch, .email-join input[type="email"] {
-    /* This ensures consistency and reduces repetition */
+h1, .subtitle, h2, p, .tagline {
     margin: 0 auto 20px; /* Centralizes and adds bottom margin */
     display: block; /* Corrects alignment issues */
 }
@@ -53,6 +52,11 @@ button, .support-merch {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Adjusted for alignment */
+    width: 80%; /* Ensures consistency in width across devices */
+    max-width: 250px; /* Maximum width to maintain aesthetic on larger screens */
+    box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+    margin: 10px auto; /* Centers the button and adds margin for spacing */
 }
 
 button:hover, .support-merch:hover {
@@ -60,29 +64,10 @@ button:hover, .support-merch:hover {
     transform: translateY(-3px);
 }
 
-.support-merch {
-    background-color: #00B140;
-    border: 2px solid #00812C;
-}
-
-.support-merch:hover {
-    background-color: #008C3E;
-}
-
-.email-join input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid grey;
-    border-radius: 5px;
-    color: #000;
-    background-color: white;
-    width: calc(100% - 24px); /* Adjusts width considering padding and border */
-}
-
 /* Styles specifically for the Google Form iframe */
 iframe {
     width: 100%; /* Makes the iframe responsive */
-    height: 1551px; /* Adjusted height to match the form's length */
+    height: auto; /* Adjust height for smaller screens if necessary */
     border: none; /* Removes the default border */
     margin-bottom: 20px; /* Adds some space below the form */
 }
@@ -96,8 +81,5 @@ iframe {
     }
     h2, p, .tagline {
         font-size: 14px;
-    }
-    iframe {
-        height: auto; /* Adjust height for smaller screens if necessary */
     }
 }
