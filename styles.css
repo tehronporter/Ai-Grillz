@@ -1,0 +1,103 @@
+body {
+    background-color: #002fa7; /* Klein Blue */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, .subtitle, h2, p, .tagline, button, .support-merch, .email-join input[type="email"] {
+    /* This ensures consistency and reduces repetition */
+    margin: 0 auto 20px; /* Centralizes and adds bottom margin */
+    display: block; /* Corrects alignment issues */
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 40px; /* Adjusted for spacing */
+}
+
+.subtitle {
+    font-size: 24px; /* Smaller font size for the subtitle */
+    margin-bottom: 30px; /* Adjusted for spacing */
+}
+
+h2 {
+    font-size: 22px;
+}
+
+p, .tagline {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button, .support-merch {
+    background-color: white;
+    color: #000;
+    border: 2px solid grey;
+    padding: 10px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .support-merch:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-3px);
+}
+
+.support-merch {
+    background-color: #00B140;
+    border: 2px solid #00812C;
+}
+
+.support-merch:hover {
+    background-color: #008C3E;
+}
+
+.email-join input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: #000;
+    background-color: white;
+    width: calc(100% - 24px); /* Adjusts width considering padding and border */
+}
+
+/* Styles specifically for the Google Form iframe */
+iframe {
+    width: 100%; /* Makes the iframe responsive */
+    height: 1551px; /* Adjusted height to match the form's length */
+    border: none; /* Removes the default border */
+    margin-bottom: 20px; /* Adds some space below the form */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    h2, p, .tagline {
+        font-size: 14px;
+    }
+    iframe {
+        height: auto; /* Adjust height for smaller screens if necessary */
+    }
+}
